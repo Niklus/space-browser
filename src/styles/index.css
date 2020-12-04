@@ -1,0 +1,162 @@
+* {
+  font-family: "Roboto Mono", monospace !important;
+}
+
+body {
+  background-color: #fff0e5;
+}
+
+h1 {
+  font-weight: bold;
+  color: #fff0e5;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+nav a {
+  font-size: 20px;
+  text-decoration: none;
+  width: 130px;
+}
+
+#newImagesBtn {
+  font-size: 20px;
+  border: silver solid 1px;
+}
+
+#backBtn {
+  font-size: 20px;
+  text-decoration: none;
+  border: silver solid 1px;
+}
+
+.card {
+  width: 90%;
+  margin: auto;
+  max-width: 800px;
+  background-color: whitesmoke;
+}
+
+.card img {
+  width: 100%;
+}
+
+.readMore {
+  font-weight: bolder;
+  font-size: 18px;
+  border: silver solid 1px;
+}
+
+.explanation {
+  font-size: 17px;
+}
+
+.myBtn {
+  font-weight: bolder;
+  font-size: 18px;
+  width: 120px;
+  border: silver solid 1px;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: black; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+.loader {
+  border: 16px solid white;
+  border-radius: 50%;
+  border-top: 16px solid black;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
