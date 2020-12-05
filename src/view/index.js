@@ -7,7 +7,7 @@ import Snackbar from "./components/Snackbar";
 
 export default (state, actions) => (
   <div oncreate={actions.init}>
-    <Header />
+    <Header actions={actions} />
     <main>
       {state.route == "" && <Home state={state} actions={actions} />}
       {state.route == "#home" && <Home state={state} actions={actions} />}

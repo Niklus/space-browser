@@ -89,6 +89,24 @@ export default {
     });
   },
 
+  share: () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "Space Browser",
+          text: "Check out this app",
+          url: "https://space-browser.netlify.app/",
+        })
+        .then(() => console.log("Successful share"))
+        .catch((error) => console.log("Error sharing", error));
+    } else {
+      window.open(
+        "https://twitter.com/intent/tweet?text=https://space-browser.netlify.app/",
+        "_blank"
+      );
+    }
+  },
+
   updateState: (data) => () => data,
 
   changeRoute: () => ({ route: window.location.hash }),

@@ -3,7 +3,11 @@
 }
 
 body {
-  background-color: #fff0e5;
+  background-color: lightblue;
+}
+
+main {
+  z-index: -1;
 }
 
 h1 {
@@ -36,7 +40,7 @@ nav a {
   width: 90%;
   margin: auto;
   max-width: 800px;
-  background-color: whitesmoke;
+  background-color: #fff0e5;
 }
 
 .card img {
@@ -158,5 +162,105 @@ However, delay the fade out process for 2.5 seconds */
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.dot-menu {
+  position: relative;
+}
+.dot-menu__checkbox {
+  display: none;
+}
+.dot-menu__label:before,
+.dot-menu__label:after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 7px;
+  background-color: #fff0e5;
+  transition: 0.8s;
+  left: 25px;
+  transition: 0.2s;
+}
+.dot-menu__label:after {
+  top: 40px;
+}
+.dot-menu__label:before {
+  top: 10px;
+}
+.dot-menu__checkbox:checked ~ .dot-menu__label {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.dot-menu__checkbox:checked ~ .dot-menu__label:before,
+.dot-menu__checkbox:checked ~ .dot-menu__label span:before,
+.dot-menu__checkbox:checked ~ .dot-menu__label:after {
+  background-color: #000;
+  top: 25px;
+}
+.dot-menu__checkbox:checked ~ .dot-menu__label span:before {
+  width: 30px;
+  left: 15px;
+}
+.dot-menu__label {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: block;
+  text-indent: -9999em;
+}
+.dot-menu__label span:before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 7px;
+  background-color: #fff0e5;
+  transition: 0.8s;
+  left: 25px;
+  top: 25px;
+}
+
+.dropbtn {
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+  position: fixed;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 26px;
   }
 }
