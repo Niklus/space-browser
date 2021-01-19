@@ -15,7 +15,7 @@ This will build the application and serve it on http://localhost:8080
 
 ## Features of this Application
 
-- Browse a number od space images
+- Browse a number of space images
 - Save Your favorite images
 - Delete saved images
 - Download hd version of image
