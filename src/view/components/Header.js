@@ -6,11 +6,9 @@ export default ({ actions }) => (
       class="w3-padding w3-bar w3-black my-header"
       style="display:flex; align-items: center; justify-content: flex-end"
     >
-      <h1 style="text-align: center; width: 100%; padding-left: 65px;">
-        Space Browser
-      </h1>
+      <h1 style="text-align: center; width: 100%;">COSMOS</h1>
 
-      <div class="dot-menu dropdown">
+      {/*<div class="dot-menu dropdown">
         <label for="dot-menu" class="dot-menu__label dropbtn">
           <span>Menu</span>
         </label>
@@ -24,6 +22,7 @@ export default ({ actions }) => (
           </a>
         </div>
       </div>
+      */}
     </div>
     <nav class="w3-padding w3-center" style="z-index:-1">
       <a class="w3-btn w3-white w3-round w3-border" href="#home">

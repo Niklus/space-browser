@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: lightblue;
+  background-color: azure;
 }
 
 main {
@@ -11,7 +11,7 @@ main {
 }
 
 h1 {
-  font-weight: bold;
+  letter-spacing: 15px;
   color: #fff0e5;
 }
 
@@ -261,6 +261,6 @@ However, delay the fade out process for 2.5 seconds */
 
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 26px;
+    font-size: 22px;
   }
 }
