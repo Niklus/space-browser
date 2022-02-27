@@ -28,18 +28,17 @@ export default {
     actions.showLoader();
 
     http.setBaseUrl("https://api.nasa.gov/planetary/apod");
-    try {
-      http.get(`?api_key=${API_KEY}&hd=true&count=12`).then((images) => {
-        actions.updateState({ images });
-        actions.saveState();
-        actions.closeImageExplanation();
-        actions.stopLoader();
-      });
-    } catch (error) {
-      console.log("oops", error);
+    
+    http.get(`?api_key=${API_KEY}&hd=true&count=12`).then((images) => {
+      actions.updateState({ images });
+      actions.saveState();
+      actions.closeImageExplanation();
+      actions.stopLoader();
+    }).catch(error => {
+      console.error("Error", error);
       actions.stopLoader();
       actions.showSnackbar("Error Detected");
-    }
+    });
   },
 
   saveImage: (title) => (state, actions) => {
