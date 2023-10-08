@@ -4,7 +4,6 @@ import db from "../utils/db";
 import dom from "./dom";
 
 const http = new Http();
-const API_KEY = "DEMO_KEY";
 
 export default {
   init: () => (state, actions) => {
@@ -27,18 +26,21 @@ export default {
 
     actions.showLoader();
 
-    http.setBaseUrl("https://api.nasa.gov/planetary/apod");
-    
-    http.get(`?api_key=${API_KEY}&hd=true&count=12`).then((images) => {
-      actions.updateState({ images });
-      actions.saveState();
-      actions.closeImageExplanation();
-      actions.stopLoader();
-    }).catch(error => {
-      console.error("Error", error);
-      actions.stopLoader();
-      actions.showSnackbar("Error Detected");
-    });
+    http.setBaseUrl("https://apod-server-p2c2.onrender.com");
+
+    http
+      .get("/api/images/random")
+      .then((images) => {
+        actions.updateState({ images });
+        actions.saveState();
+        actions.closeImageExplanation();
+        actions.stopLoader();
+      })
+      .catch((error) => {
+        console.error("Error", error);
+        actions.stopLoader();
+        actions.showSnackbar("Error Detected");
+      });
   },
 
   saveImage: (title) => (state, actions) => {
