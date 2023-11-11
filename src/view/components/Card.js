@@ -25,7 +25,7 @@ export default ({ image, actions, state }) => (
         >
           Download
         </a>
-        <span>|</span>
+        <span> </span>
         <span>
           {state.route == "#favs" ? (
             <button

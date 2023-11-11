@@ -7,7 +7,7 @@ export default ({ actions }) => (
       style="display:flex; align-items: center; justify-content: flex-end"
     >
       <h2 style="text-align: center; width: 100%; font-size: 30px">
-        Space Browser
+        SPACE BROWSER
       </h2>
 
       {/*<div class="dot-menu dropdown">
@@ -31,7 +31,7 @@ export default ({ actions }) => (
         Images
       </a>
       <span class="w3-padding" style="font-size:10px;">
-        |
+        {""}
       </span>
       <a class="w3-btn w3-white w3-round w3-border" href="#favs">
         Saved
